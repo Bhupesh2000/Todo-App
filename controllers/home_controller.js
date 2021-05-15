@@ -1,3 +1,4 @@
+// handling the get request
 module.exports.homeGet=function(req,res){
     return res.render('home',{
         title:'TODO APP',
