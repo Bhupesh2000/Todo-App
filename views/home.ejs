@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>
+            <%= title%>
+        </title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500&family=Poppins&family=Roboto&family=Corben&family=Varela+Round&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/6db450fa6e.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/CSS/home-form.css">
+        <link rel="stylesheet" href="/CSS/home-list.css">
+        <link rel="stylesheet" href="/CSS/home-main.css">
+    </head>
+    <body>
+        <main>
+            <section id="glass">
+                <div id="aside">
+                    <form action="/create-entry" method="POST" id="entry-form">
+                        <div id="enteries">
+                            <label for="description">Description</label>
+                            <input type="text" id="description" name="description" placeholder="What do you need to do?" required>
+                            <label for="category">Category</label>
+                            <div class="custom-select">
+                                <select name="category" required>
+                                  <option value="0">Select a category</option>
+                                  <option value="1">Personal</option>
+                                  <option value="2">School</option>
+                                  <option value="3">Work</option>
+                                  <option value="4">Cleaning</option>
+                                  <option value="5">Other</option>
+                                </select>
+                            </div>
+                            <label for="date">Due Date</label>
+                            <input type="date" name="date" id="date" pattern="\d{4}-\d{2}-\d{2}">
+                        </div>
+
+                        <div id="form-buttons">
+                            <button type="submit" id="add-button"><i class="fas fa-plus"></i> ADD TASK</button>
+                            <button type="submit" id="delete-button"><i class="fas fa-trash-alt"></i>DELETE TASK</button>
+                        </div>
+                    </form>
+                </div>
+                <div id="main">
+                    <div id="heading">
+                        <h1>TODO App</h1>
+                    </div>
+                    <div id="list">
+                        <ul id="todo-list">
+                            <% for(let i of to_do_list){%>
+                                <li class="individual">
+                                    <div class="view-category-conatiner">
+                                        <div class="category-box">
+                                            <p><%= i.category %></p>
+                                        </div>
+                                    </div>
+                                    <div class="details">
+                                        <h2 class="work"><%= i.todo %></h2>
+                                        <p class="details-date"><i class="far fa-calendar"></i><%= i.date %></p>
+                                    </div>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="">
+                                    </div>
+                                </li>
+                                <%}
+                            %>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <div id="circle1"></div>
+        <div id="circle2"></div>
+        <script type="text/javascript" src="/javascript/home-form.js"></script>
+        <script type="text/javascript" src="/javascript/home-list.js"></script>
+    </body>
+</html>

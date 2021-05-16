@@ -1,0 +1,115 @@
+#main{
+    flex: 2;
+    padding: 3% 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#heading{
+    height: 20%;
+}
+h1{
+    color: #426696;
+    font-size: 3rem;
+    font-weight: 600;
+    opacity: 0.8;
+    font-family: 'Noto Serif TC', serif;
+    margin-left: 2vw;
+}
+
+#list{
+    height: 65%;
+    margin-bottom: 5%;
+    overflow:hidden;
+    overflow-y: scroll;
+}
+
+#list::-webkit-scrollbar{
+    display: none;
+}
+#list{
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
+  }
+
+.individual{
+    display: flex;
+    height:25%;
+    margin:0 0 5%;
+    background: linear-gradient(to left top, rgba(255,255,255,0.8),rgba(255,255,255,0.5));
+    border-radius: 10px;
+    box-shadow: 6px 6px 10px rgba(122, 122, 122,0.212);
+}
+
+.view-category-conatiner{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.category-box{
+    width: 80%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-radius: 5px;
+}
+.category-box-personal{
+    background-color:rgb(255, 0, 255);
+}
+.category-box-school{
+    background-color:#00a2ff;
+}
+.category-box-work{
+    background-color:rgb(0, 17, 255) ;
+}
+.category-box-cleaning{
+    background-color:rgb(111, 0, 255) ;
+}
+.category-box-other{
+    background-color:rgb(2, 255, 179) ;
+}
+
+.details{
+    width: 75%;
+    color: #658ec6;
+    opacity: 0.8;
+    padding-left: 5px;
+}
+
+.work{
+    font-family: 'Varela Round', sans-serif;
+    font-weight: 800;
+    margin-top: 12px;
+}
+.details-date{
+    font-family: 'Corben', cursive;
+    font-size: 0.7rem;
+}
+.details-date .fa-calendar{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.checkbox{
+    /* margin-top: 6%;
+    cursor: pointer; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.checkbox input{
+    cursor: pointer;
+}
+
+.line-through{
+    text-decoration: line-through;
+    -webkit-text-decoration-color:#7289A4 ; /* Safari */  
+    text-decoration-color: #7289A4;
+}

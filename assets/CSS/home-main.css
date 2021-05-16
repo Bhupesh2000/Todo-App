@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Roboto', sans-serif;
+}
+
+main{
+    min-height: 100vh;
+    background: linear-gradient(to top right, #65dfc9, #6cdbeb);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#glass{
+    min-height: 80vh;
+    background-color: white;
+    width: 60%;
+    background: linear-gradient(to right bottom, rgba(255,255,255,0.7),rgba(255,255,255,0.3));
+    border-radius:2rem ;
+    z-index: 2;
+    backdrop-filter: blur(1rem);
+    display: flex;
+}
+
+#circle1,#circle2{
+    background-color: white;
+    background: linear-gradient(to right bottom, rgba(255,255,255,0.8),rgba(255,255,255,0.3));
+    height: 15rem;
+    width: 15rem;
+    position: absolute;
+    border-radius: 50%;
+}
+#circle1{
+    top: 5%;
+    right: 15%;
+}
+#circle2{
+    bottom: 5%;
+    left: 10%;
+}
