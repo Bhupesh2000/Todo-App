@@ -3,15 +3,18 @@ const express=require('express');
 const app=express();
 const port=8001;
 
-// Setup the routes page
-app.use('/',require('./routes/index'));
-
 // Set up ejs as view engine
 app.set('view engine','ejs');
 app.set('views','./views');
 
+app.use(express.urlencoded());
+
 // linking static files
 app.use(express.static('assets'));
+
+// Setup the routes page
+app.use('/',require('./routes/index'));
+
 
 // app to listen the port
 app.listen(port,function(err){

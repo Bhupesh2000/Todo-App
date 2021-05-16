@@ -1,3 +1,4 @@
+
 // Sending temporary list from the server
 var todoList=[
     {
@@ -33,4 +34,14 @@ module.exports.homeGet=function(req,res){
         title:'TODO APP',
         to_do_list:todoList,
     });
+}
+
+// handling the post request
+module.exports.homePost=function(req,res){
+    todoList.push({
+        todo:req.body.description,
+        date:req.body.date,
+        category:req.body.category
+    })
+    res.redirect('back');
 }

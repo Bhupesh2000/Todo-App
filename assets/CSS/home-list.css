@@ -1,13 +1,10 @@
 #main{
     flex: 2;
     padding: 3% 5vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 #heading{
-    height: 20%;
+    height: 17%;
 }
 h1{
     color: #426696;
@@ -19,7 +16,7 @@ h1{
 }
 
 #list{
-    height: 65%;
+    height: 80%;
     margin-bottom: 5%;
     overflow:hidden;
     overflow-y: scroll;
@@ -33,9 +30,22 @@ h1{
     scrollbar-width: none; 
   }
 
+#todo-list{
+    height: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+#todo-list::-webkit-scrollbar{
+    display: none;
+}
+#todo-list{
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
+  }
+
 .individual{
     display: flex;
-    height:25%;
+    height:87px;
     margin:0 0 5%;
     background: linear-gradient(to left top, rgba(255,255,255,0.8),rgba(255,255,255,0.5));
     border-radius: 10px;

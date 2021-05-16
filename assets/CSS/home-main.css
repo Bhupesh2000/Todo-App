@@ -7,7 +7,7 @@
 }
 
 main{
-    min-height: 100vh;
+    height: 100vh;
     background: linear-gradient(to top right, #65dfc9, #6cdbeb);
     display: flex;
     justify-content: center;
@@ -15,7 +15,7 @@ main{
 }
 
 #glass{
-    min-height: 80vh;
+    max-height: 80vh;
     background-color: white;
     width: 60%;
     background: linear-gradient(to right bottom, rgba(255,255,255,0.7),rgba(255,255,255,0.3));
