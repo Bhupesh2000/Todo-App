@@ -3,6 +3,10 @@ const express=require('express');
 const app=express();
 const port=8001;
 
+// require mongoose
+const db=require('./config/mongoose');
+const Todo=require('./models/todo');
+
 // Set up ejs as view engine
 app.set('view engine','ejs');
 app.set('views','./views');
