@@ -15,7 +15,7 @@ main{
 }
 
 #glass{
-    max-height: 80vh;
+    height: 80vh;
     background-color: white;
     width: 60%;
     background: linear-gradient(to right bottom, rgba(255,255,255,0.7),rgba(255,255,255,0.3));

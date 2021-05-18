@@ -16,8 +16,9 @@ h1{
 }
 
 #list{
-    height: 80%;
-    margin-bottom: 5%;
+    height: 74%;
+    margin-top: 2%;
+    margin-bottom:1%;
     overflow:hidden;
     overflow-y: scroll;
 }
@@ -116,6 +117,14 @@ h1{
 }
 .checkbox input{
     cursor: pointer;
+}
+
+.id-container{
+    display:none ;
+}
+.id-container p{
+    margin: 0;
+    padding: 0;
 }
 
 .line-through{

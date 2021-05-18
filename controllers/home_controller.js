@@ -68,3 +68,17 @@ module.exports.homePost=function(req,res){
         res.redirect('back');
     })
 }
+
+module.exports.homeDelete=function(req,res){
+    let id=req.query.id;
+    console.log(id);
+    Todo.findByIdAndDelete(id,function(err){
+        if(err){
+            console.log('Error in deleting the object');
+            return;
+        }
+        
+        // res.redirect('back');
+        return res.redirect('back');
+    })
+}

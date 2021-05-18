@@ -46,3 +46,24 @@ checkboxList.forEach(checkbox=>{
 
 
 
+const deleteButton=document.getElementById('delete-button');
+deleteButton.addEventListener('click',()=>{
+    checkboxList.forEach(checkbox=>{
+        let box=checkbox.getElementsByTagName('input');
+        // console.log(box);
+        if(box[0].checked==true){
+            // console.log(checkbox.getElementsByTagName('input'))
+            let parentDiv=checkbox.parentElement;
+
+            let id=parentDiv.getElementsByClassName('id-container')[0].textContent.replace(/[\n\r]+|[\s]{2,}/g, ' ').trim();
+            // console.log(id);
+            // checkbox.innerHTML='<a href="/delete-entry/?id='+id+'"><input type="checkbox"></a>'
+            // console.log(box[0]);
+            let href='/delete-entry/?id='+id
+            let xhttp = new XMLHttpRequest();
+            xhttp.open("GET",href, true);
+            xhttp.send();
+            window.location.reload(true); 
+        }
+    })
+})
