@@ -1,3 +1,4 @@
+
 // Add classes to different categories
 const categoryBoxList=document.querySelectorAll('.category-box');
 
@@ -15,7 +16,7 @@ workList.forEach(work=>{
     work.textContent=firstWord+workText.slice(1);
 })
 
-//Set up content for no deadline
+// Set up content for no deadline
 const dateList=document.querySelectorAll('.details-date');
 dateList.forEach(date=>{
     if(date.textContent==''){
@@ -23,11 +24,11 @@ dateList.forEach(date=>{
     }
 })
 
+// transform text to line-through when checkbox is checked
 const checkboxList=document.querySelectorAll('.checkbox');
 for(let i=0;i<checkboxList.length;i++){
     checkboxList[i].setAttribute('id',i);
 }
-
 checkboxList.forEach(checkbox=>{
     let box=checkbox.getElementsByTagName('input');
     box[0].addEventListener('click',()=>{
@@ -41,3 +42,7 @@ checkboxList.forEach(checkbox=>{
         }
     })
 })
+
+
+
+
